@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import PropTypes from 'prop-types';
-import { StyledLink } from "components/BackLink/BackLink.styled";
+import { StyledLink } from "./MovieList.styled"
 
 export const MovieList = ({movies}) => {
     const location = useLocation();
