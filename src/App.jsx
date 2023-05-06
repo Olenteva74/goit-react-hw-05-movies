@@ -1,12 +1,24 @@
 import { Routes, Route, Navigate } from "react-router";
 import { lazy } from "react";
 import { SharedLayout } from "components/SharedLayout";
-import { Cast } from "components/Cast";
-import { Reviews } from "components/Reviews";
+// import { Cast } from "components/Cast";
+// import { Reviews } from "components/Reviews";
 
 const Home = lazy(() => import("pages/Home"));
 const Movies = lazy(() => import ("pages/Movies"));
 const MovieDetails = lazy(() => import("pages/MovieDetails"));
+const Cast = lazy(() => import("components/Cast").then(module => {
+  return { 
+    ...module,
+    default: module.Cast
+  }
+}));
+const Reviews = lazy(() => import("components/Reviews").then(module => {
+  return { 
+    ...module,
+    default: module.Reviews
+  }
+}));
 
 
 
