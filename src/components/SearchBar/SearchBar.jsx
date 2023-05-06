@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const SearchBar = ({onSubmit}) => {
-  const [query, setQuery] = useState("");
+export const SearchBar = ({onSubmit, searchQuery}) => {
+  const [query, setQuery] = useState(searchQuery || "");
   const [disabledBtn, setDisabledBtn] = useState(false);
 
   const handleOnChange = (event) => {
@@ -35,5 +35,6 @@ export const SearchBar = ({onSubmit}) => {
 }
 
 SearchBar.propTypes = {
-    onSubmit: PropTypes.func.isRequired
+    onSubmit: PropTypes.func.isRequired,
+    searchQuery: PropTypes.string
 }

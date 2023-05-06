@@ -1,8 +1,7 @@
 import { Routes, Route, Navigate } from "react-router";
 import { lazy } from "react";
 import { SharedLayout } from "components/SharedLayout";
-// import { Cast } from "components/Cast";
-// import { Reviews } from "components/Reviews";
+
 
 const Home = lazy(() => import("pages/Home"));
 const Movies = lazy(() => import ("pages/Movies"));

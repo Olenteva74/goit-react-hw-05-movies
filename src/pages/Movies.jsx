@@ -32,7 +32,7 @@ const Movies = () => {
 
     return (
         <div>
-           <SearchBar onSubmit={getSearchQuery}/>
+           <SearchBar onSubmit={getSearchQuery} searchQuery={query}/>
            <MovieList movies={movies}/>
         </div>
     )
